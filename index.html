@@ -1,0 +1,2180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="DELL" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style1 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style2 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style2 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style4 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style4 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style6 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style9 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style9 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style10 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style10 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style11 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style11 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style12 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style12 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style13 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style13 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style14 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style14 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style15 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style15 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style16 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style16 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style17 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style17 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style18 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style18 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style19 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style19 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style20 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style20 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style21 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style21 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style22 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style22 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style23 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style23 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style24 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style24 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style25 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style25 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style26 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style27 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style28 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style28 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style29 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style30 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style31 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style31 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style32 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style32 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style33 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style33 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style34 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style34 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style35 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style35 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style36 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style36 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style37 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style37 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style38 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style38 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style39 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      th.style39 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#B4C6E7 }
+      td.style40 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style40 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style41 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style41 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style42 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style42 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style43 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style43 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style44 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style44 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style45 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style45 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style46 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      th.style46 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D9E2F3 }
+      td.style47 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style47 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style48 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style48 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      table.sheet0 col.col0 { width:348.37777378pt }
+      table.sheet0 col.col1 { width:73.87777693pt }
+      table.sheet0 col.col2 { width:54.2222216pt }
+      table.sheet0 col.col3 { width:49.47777721pt }
+      table.sheet0 col.col4 { width:54.2222216pt }
+      table.sheet0 col.col5 { width:52.18888829pt }
+      table.sheet0 col.col6 { width:46.76666613pt }
+      table.sheet0 col.col7 { width:46.76666613pt }
+      table.sheet0 col.col8 { width:41.34444397pt }
+      table.sheet0 col.col9 { width:36.59999958pt }
+      table.sheet0 col.col10 { width:27.78888857pt }
+      table.sheet0 col.col11 { width:36.59999958pt }
+      table.sheet0 col.col12 { width:33.8888885pt }
+      table.sheet0 tr { height:15pt }
+      table.sheet0 tr.row4 { height:15pt }
+      table.sheet0 tr.row92 { height:14.5pt }
+      table.sheet0 tr.row93 { height:14.5pt }
+      table.sheet0 tr.row94 { height:14.5pt }
+      table.sheet0 tr.row95 { height:14.5pt }
+      table.sheet0 tr.row96 { height:14.5pt }
+      table.sheet0 tr.row97 { height:14.5pt }
+      table.sheet0 tr.row98 { height:14.5pt }
+      table.sheet0 tr.row99 { height:14.5pt }
+      table.sheet0 tr.row100 { height:14.5pt }
+      table.sheet0 tr.row101 { height:14.5pt }
+      table.sheet0 tr.row102 { height:14.5pt }
+      table.sheet0 tr.row103 { height:14.5pt }
+      table.sheet0 tr.row104 { height:14.5pt }
+      table.sheet0 tr.row105 { height:14.5pt }
+      table.sheet0 tr.row106 { height:14.5pt }
+      table.sheet0 tr.row107 { height:14.5pt }
+      table.sheet0 tr.row108 { height:14.5pt }
+      table.sheet0 tr.row109 { height:14.5pt }
+      table.sheet0 tr.row110 { height:14.5pt }
+      table.sheet0 tr.row111 { height:14.5pt }
+      table.sheet0 tr.row112 { height:14.5pt }
+      table.sheet0 tr.row113 { height:14.5pt }
+      table.sheet0 tr.row114 { height:14.5pt }
+      table.sheet0 tr.row115 { height:14.5pt }
+      table.sheet0 tr.row116 { height:14.5pt }
+      table.sheet0 tr.row117 { height:14.5pt }
+      table.sheet0 tr.row118 { height:14.5pt }
+      table.sheet0 tr.row119 { height:14.5pt }
+      table.sheet0 tr.row120 { height:14.5pt }
+      table.sheet0 tr.row121 { height:14.5pt }
+      table.sheet0 tr.row122 { height:14.5pt }
+      table.sheet0 tr.row123 { height:14.5pt }
+      table.sheet0 tr.row124 { height:14.5pt }
+      table.sheet0 tr.row125 { height:14.5pt }
+      table.sheet0 tr.row126 { height:14.5pt }
+      table.sheet0 tr.row127 { height:14.5pt }
+      table.sheet0 tr.row128 { height:14.5pt }
+      table.sheet0 tr.row129 { height:14.5pt }
+      table.sheet0 tr.row130 { height:14.5pt }
+      table.sheet0 tr.row131 { height:14.5pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <col class="col5">
+        <col class="col6">
+        <col class="col7">
+        <col class="col8">
+        <col class="col9">
+        <col class="col10">
+        <col class="col11">
+        <col class="col12">
+        <tbody>
+          <tr class="row0">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style18 s">Overall </td>
+            <td class="column1 style18 s">&nbsp;Amount spent  </td>
+            <td class="column2 style18 s">&nbsp;Impressions</td>
+            <td class="column3 style18 s">&nbsp;Link clicks</td>
+            <td class="column4 style18 s">&nbsp;Reach</td>
+            <td class="column5 style18 s">Conversions</td>
+            <td class="column6 style18 s">Revenue </td>
+            <td class="column7 style18 s">ROAS</td>
+            <td class="column8 style18 s">CPA</td>
+            <td class="column9 style18 s">CPM</td>
+            <td class="column10 style18 s">CTR</td>
+            <td class="column11 style18 s">CPC</td>
+            <td class="column12 style46 s">CPV</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style5 s">Planned</td>
+            <td class="column1 style6 n">€ 15,000.00</td>
+            <td class="column2 style5 s">-</td>
+            <td class="column3 style5 s">-</td>
+            <td class="column4 style5 s">-</td>
+            <td class="column5 style5 s">-</td>
+            <td class="column6 style5 s">-</td>
+            <td class="column7 style23 n">150.00%</td>
+            <td class="column8 style5 s">-</td>
+            <td class="column9 style45 n">&nbsp;€  5.00 </td>
+            <td class="column10 style8 n">0.80%</td>
+            <td class="column11 style45 n">&nbsp;€  4.00 </td>
+            <td class="column12 style47 n">&nbsp;€  0.05 </td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style5 s">Delivered</td>
+            <td class="column1 style6 n">€ 15,000.00</td>
+            <td class="column2 style7 n">875,002</td>
+            <td class="column3 style7 n">4,054</td>
+            <td class="column4 style7 n">512,016</td>
+            <td class="column5 style7 n">253</td>
+            <td class="column6 style7 n">27,830</td>
+            <td class="column7 style23 n">185.53%</td>
+            <td class="column8 style6 n">€ 59.29</td>
+            <td class="column9 style6 n">€ 17.14</td>
+            <td class="column10 style8 n">0.46%</td>
+            <td class="column11 style6 n">€ 3.70</td>
+            <td class="column12 style48 n">€ 0.38</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style19 s">Difference</td>
+            <td class="column1 style20 f">€ 0.00</td>
+            <td class="column2 style20 s">-</td>
+            <td class="column3 style20 s">-</td>
+            <td class="column4 style20 s">-</td>
+            <td class="column5 style20 s">-</td>
+            <td class="column6 style20 s">-</td>
+            <td class="column7 style21 s">-</td>
+            <td class="column8 style20 s">-</td>
+            <td class="column9 style20 s">-</td>
+            <td class="column10 style20 s">-</td>
+            <td class="column11 style20 s">-</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style13 s">Audience </td>
+            <td class="column1 style17 s">&nbsp;&nbsp;Amount spent  </td>
+            <td class="column2 style0 s">&nbsp;Impressions</td>
+            <td class="column3 style15 s">&nbsp;Link clicks</td>
+            <td class="column4 style0 s">&nbsp;Reach</td>
+            <td class="column5 style0 s">&nbsp;Purchases</td>
+            <td class="column6 style0 s">&nbsp;Revenue</td>
+            <td class="column7 style0 s">&nbsp;ROAS</td>
+            <td class="column8 style17 s">&nbsp;CPA</td>
+            <td class="column9 style17 s">&nbsp;CPM</td>
+            <td class="column10 style0 s">&nbsp;CTR</td>
+            <td class="column11 style17 s">&nbsp;CPC</td>
+            <td class="column12 style0 s">&nbsp;CPV</td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style14 s">CRM</td>
+            <td class="column1 style17 n">&nbsp;€  957.07 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;39,881.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;244.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;20,147.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;43.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;4,730.00 </td>
+            <td class="column7 style16 n">494.22%</td>
+            <td class="column8 style17 n">&nbsp;€  22.26 </td>
+            <td class="column9 style17 n">&nbsp;€  24.00 </td>
+            <td class="column10 style16 n">0.61%</td>
+            <td class="column11 style17 n">&nbsp;€  3.92 </td>
+            <td class="column12 style17 n">&nbsp;€  0.46 </td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style14 s">Engagers</td>
+            <td class="column1 style17 n">&nbsp;€  5,249.90 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;410,060.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;1,673.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;231,663.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;59.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;6,490.00 </td>
+            <td class="column7 style16 n">123.62%</td>
+            <td class="column8 style17 n">&nbsp;€  88.98 </td>
+            <td class="column9 style17 n">&nbsp;€  12.80 </td>
+            <td class="column10 style16 n">0.41%</td>
+            <td class="column11 style17 n">&nbsp;€  3.14 </td>
+            <td class="column12 style17 n">&nbsp;€  0.26 </td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style14 s">Interest</td>
+            <td class="column1 style17 n">&nbsp;€  3,334.01 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;158,893.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;789.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;104,092.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;51.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;5,610.00 </td>
+            <td class="column7 style16 n">168.27%</td>
+            <td class="column8 style17 n">&nbsp;€  65.37 </td>
+            <td class="column9 style17 n">&nbsp;€  20.98 </td>
+            <td class="column10 style16 n">0.50%</td>
+            <td class="column11 style17 n">&nbsp;€  4.23 </td>
+            <td class="column12 style17 n">&nbsp;€  0.66 </td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style14 s">Lookalike</td>
+            <td class="column1 style17 n">&nbsp;€  3,821.99 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;205,541.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;1,070.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;135,273.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;52.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;5,720.00 </td>
+            <td class="column7 style16 n">149.66%</td>
+            <td class="column8 style17 n">&nbsp;€  73.50 </td>
+            <td class="column9 style17 n">&nbsp;€  18.59 </td>
+            <td class="column10 style16 n">0.52%</td>
+            <td class="column11 style17 n">&nbsp;€  3.57 </td>
+            <td class="column12 style17 n">&nbsp;€  0.43 </td>
+          </tr>
+          <tr class="row12">
+            <td class="column0 style14 s">WebsiteVisitors</td>
+            <td class="column1 style17 n">&nbsp;€  1,637.03 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;60,627.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;278.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;20,841.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;48.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;5,280.00 </td>
+            <td class="column7 style16 n">322.54%</td>
+            <td class="column8 style17 n">&nbsp;€  34.10 </td>
+            <td class="column9 style17 n">&nbsp;€  27.00 </td>
+            <td class="column10 style16 n">0.46%</td>
+            <td class="column11 style17 n">&nbsp;€  5.89 </td>
+            <td class="column12 style17 n">&nbsp;€  0.61 </td>
+          </tr>
+          <tr class="row13">
+            <td class="column0 style14 s">Grand Total</td>
+            <td class="column1 style17 n">&nbsp;€  15,000.00 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;875,002.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4,054.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;512,016.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;253.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;27,830.00 </td>
+            <td class="column7 style16 n">185.53%</td>
+            <td class="column8 style17 n">&nbsp;€  59.29 </td>
+            <td class="column9 style17 n">&nbsp;€  17.14 </td>
+            <td class="column10 style16 n">0.46%</td>
+            <td class="column11 style17 n">&nbsp;€  3.70 </td>
+            <td class="column12 style17 n">&nbsp;€  0.38 </td>
+          </tr>
+          <tr class="row14">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row16">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row17">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row18">
+            <td class="column0 style13 s">Platform</td>
+            <td class="column1 style17 s">&nbsp;&nbsp;Amount spent </td>
+            <td class="column2 style0 s">&nbsp;Impressions</td>
+            <td class="column3 style15 s">&nbsp;Link clicks</td>
+            <td class="column4 style0 s">&nbsp;Reach</td>
+            <td class="column5 style0 s">&nbsp;Purchases</td>
+            <td class="column6 style0 s">&nbsp;Revenue</td>
+            <td class="column7 style0 s">&nbsp;ROAS</td>
+            <td class="column8 style17 s">&nbsp;CPA</td>
+            <td class="column9 style17 s">&nbsp;CPM</td>
+            <td class="column10 style0 s">&nbsp;CTR</td>
+            <td class="column11 style17 s">&nbsp;CPC</td>
+            <td class="column12 style0 s">&nbsp;CPV</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0 style14 s">Facebook</td>
+            <td class="column1 style17 n">&nbsp;€  10,278.54 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;486,062.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;2,564.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;231,339.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;157.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;17,270.00 </td>
+            <td class="column7 style16 n">168.02%</td>
+            <td class="column8 style17 n">&nbsp;€  65.47 </td>
+            <td class="column9 style17 n">&nbsp;€  21.15 </td>
+            <td class="column10 style16 n">0.53%</td>
+            <td class="column11 style17 n">&nbsp;€  4.01 </td>
+            <td class="column12 style17 n">&nbsp;€  0.56 </td>
+          </tr>
+          <tr class="row20">
+            <td class="column0 style14 s">Instagram</td>
+            <td class="column1 style17 n">&nbsp;€  4,721.46 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;388,940.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;1,490.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;280,677.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;96.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;10,560.00 </td>
+            <td class="column7 style16 n">223.66%</td>
+            <td class="column8 style17 n">&nbsp;€  49.18 </td>
+            <td class="column9 style17 n">&nbsp;€  12.14 </td>
+            <td class="column10 style16 n">0.38%</td>
+            <td class="column11 style17 n">&nbsp;€  3.17 </td>
+            <td class="column12 style17 n">&nbsp;€  0.22 </td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style14 s">Grand Total</td>
+            <td class="column1 style17 n">&nbsp;€  15,000.00 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;875,002.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4,054.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;512,016.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;253.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;27,830.00 </td>
+            <td class="column7 style16 n">185.53%</td>
+            <td class="column8 style17 n">&nbsp;€  59.29 </td>
+            <td class="column9 style17 n">&nbsp;€  17.14 </td>
+            <td class="column10 style16 n">0.46%</td>
+            <td class="column11 style17 n">&nbsp;€  3.70 </td>
+            <td class="column12 style17 n">&nbsp;€  0.38 </td>
+          </tr>
+          <tr class="row22">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row23">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row24">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row25">
+            <td class="column0 style13 s">Placement</td>
+            <td class="column1 style17 s">&nbsp;&nbsp;Amount spent  </td>
+            <td class="column2 style0 s">&nbsp;Impressions</td>
+            <td class="column3 style15 s">&nbsp;Link clicks</td>
+            <td class="column4 style0 s">&nbsp;Reach</td>
+            <td class="column5 style0 s">&nbsp;Purchases</td>
+            <td class="column6 style0 s">&nbsp;Revenue</td>
+            <td class="column7 style0 s">&nbsp;ROAS</td>
+            <td class="column8 style17 s">&nbsp;CPA</td>
+            <td class="column9 style17 s">&nbsp;CPM</td>
+            <td class="column10 style0 s">&nbsp;CTR</td>
+            <td class="column11 style17 s">&nbsp;CPC</td>
+            <td class="column12 style0 s">&nbsp;CPV</td>
+          </tr>
+          <tr class="row26">
+            <td class="column0 style14 s">Explore</td>
+            <td class="column1 style17 n">&nbsp;€  158.69 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;45,536.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;85.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;37,978.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;52.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;5,720.00 </td>
+            <td class="column7 style16 n">3604.52%</td>
+            <td class="column8 style17 n">&nbsp;€  3.05 </td>
+            <td class="column9 style17 n">&nbsp;€  3.48 </td>
+            <td class="column10 style16 n">0.19%</td>
+            <td class="column11 style17 n">&nbsp;€  1.87 </td>
+            <td class="column12 style17 n">&nbsp;€  0.14 </td>
+          </tr>
+          <tr class="row27">
+            <td class="column0 style14 s">Feed: News Feed</td>
+            <td class="column1 style17 n">&nbsp;€  14,841.31 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;829,466.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;3,969.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;474,038.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;201.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;22,110.00 </td>
+            <td class="column7 style16 n">148.98%</td>
+            <td class="column8 style17 n">&nbsp;€  73.84 </td>
+            <td class="column9 style17 n">&nbsp;€  17.89 </td>
+            <td class="column10 style16 n">0.48%</td>
+            <td class="column11 style17 n">&nbsp;€  3.74 </td>
+            <td class="column12 style17 n">&nbsp;€  0.39 </td>
+          </tr>
+          <tr class="row28">
+            <td class="column0 style14 s">Grand Total</td>
+            <td class="column1 style17 n">&nbsp;€  15,000.00 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;875,002.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4,054.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;512,016.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;253.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;27,830.00 </td>
+            <td class="column7 style16 n">185.53%</td>
+            <td class="column8 style17 n">&nbsp;€  59.29 </td>
+            <td class="column9 style17 n">&nbsp;€  17.14 </td>
+            <td class="column10 style16 n">0.46%</td>
+            <td class="column11 style17 n">&nbsp;€  3.70 </td>
+            <td class="column12 style17 n">&nbsp;€  0.38 </td>
+          </tr>
+          <tr class="row29">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row30">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row31">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row32">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row33">
+            <td class="column0 style13 s">Creative</td>
+            <td class="column1 style17 s">&nbsp;&nbsp;Amount spent  </td>
+            <td class="column2 style0 s">&nbsp;Impressions</td>
+            <td class="column3 style15 s">&nbsp;Link clicks</td>
+            <td class="column4 style0 s">&nbsp;Reach</td>
+            <td class="column5 style0 s">&nbsp;Purchases</td>
+            <td class="column6 style0 s">&nbsp;Revenue</td>
+            <td class="column7 style0 s">&nbsp;ROAS</td>
+            <td class="column8 style17 s">&nbsp;CPA</td>
+            <td class="column9 style17 s">&nbsp;CPM</td>
+            <td class="column10 style0 s">&nbsp;CTR</td>
+            <td class="column11 style17 s">&nbsp;CPC</td>
+            <td class="column12 style0 s">&nbsp;CPV</td>
+          </tr>
+          <tr class="row34">
+            <td class="column0 style14 s">Web_Dark_LinkAd1_EN</td>
+            <td class="column1 style17 n">&nbsp;€  1,982.33 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;139,285.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;525.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;83,031.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;14.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;1,540.00 </td>
+            <td class="column7 style16 n">77.69%</td>
+            <td class="column8 style17 n">&nbsp;€  141.60 </td>
+            <td class="column9 style17 n">&nbsp;€  14.23 </td>
+            <td class="column10 style16 n">0.38%</td>
+            <td class="column11 style17 n">&nbsp;€  3.78 </td>
+            <td class="column12 style17 e">#DIV/0!</td>
+          </tr>
+          <tr class="row35">
+            <td class="column0 style14 s">Web_Dark_LinkAd1_FR</td>
+            <td class="column1 style17 n">&nbsp;€  6,104.09 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;328,401.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;1,992.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;191,831.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;47.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;5,170.00 </td>
+            <td class="column7 style16 n">84.70%</td>
+            <td class="column8 style17 n">&nbsp;€  129.87 </td>
+            <td class="column9 style17 n">&nbsp;€  18.59 </td>
+            <td class="column10 style16 n">0.61%</td>
+            <td class="column11 style17 n">&nbsp;€  3.06 </td>
+            <td class="column12 style17 e">#DIV/0!</td>
+          </tr>
+          <tr class="row36">
+            <td class="column0 style14 s">Web_Dark_LinkAd2_EN</td>
+            <td class="column1 style17 n">&nbsp;€  1,346.54 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;98,818.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;345.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;61,455.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;10.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;1,100.00 </td>
+            <td class="column7 style16 n">81.69%</td>
+            <td class="column8 style17 n">&nbsp;€  134.65 </td>
+            <td class="column9 style17 n">&nbsp;€  13.63 </td>
+            <td class="column10 style16 n">0.35%</td>
+            <td class="column11 style17 n">&nbsp;€  3.90 </td>
+            <td class="column12 style17 n">&nbsp;€  0.16 </td>
+          </tr>
+          <tr class="row37">
+            <td class="column0 style14 s">Web_Dark_LinkAd2_FR</td>
+            <td class="column1 style17 n">&nbsp;€  2,315.47 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;171,849.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;593.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;104,854.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;30.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;3,300.00 </td>
+            <td class="column7 style16 n">142.52%</td>
+            <td class="column8 style17 n">&nbsp;€  77.18 </td>
+            <td class="column9 style17 n">&nbsp;€  13.47 </td>
+            <td class="column10 style16 n">0.35%</td>
+            <td class="column11 style17 n">&nbsp;€  3.90 </td>
+            <td class="column12 style17 n">&nbsp;€  0.16 </td>
+          </tr>
+          <tr class="row38">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_CRM_DE</td>
+            <td class="column1 style17 n">&nbsp;€  22.12 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;661.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;6.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;284.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1989.15%</td>
+            <td class="column8 style17 n">&nbsp;€  5.53 </td>
+            <td class="column9 style17 n">&nbsp;€  33.46 </td>
+            <td class="column10 style16 n">0.91%</td>
+            <td class="column11 style17 n">&nbsp;€  3.69 </td>
+            <td class="column12 style17 n">&nbsp;€  0.23 </td>
+          </tr>
+          <tr class="row39">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_CRM_EN</td>
+            <td class="column1 style17 n">&nbsp;€  34.95 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,453.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;10.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;724.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">944.21%</td>
+            <td class="column8 style17 n">&nbsp;€  11.65 </td>
+            <td class="column9 style17 n">&nbsp;€  24.05 </td>
+            <td class="column10 style16 n">0.69%</td>
+            <td class="column11 style17 n">&nbsp;€  3.50 </td>
+            <td class="column12 style17 n">&nbsp;€  0.23 </td>
+          </tr>
+          <tr class="row40">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_CRM_FR</td>
+            <td class="column1 style17 n">&nbsp;€  38.07 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,145.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;542.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">866.82%</td>
+            <td class="column8 style17 n">&nbsp;€  12.69 </td>
+            <td class="column9 style17 n">&nbsp;€  33.25 </td>
+            <td class="column10 style16 n">0.26%</td>
+            <td class="column11 style17 n">&nbsp;€  12.69 </td>
+            <td class="column12 style17 n">&nbsp;€  0.26 </td>
+          </tr>
+          <tr class="row41">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Engagers_DE</td>
+            <td class="column1 style17 n">&nbsp;€  69.57 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;3,582.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;8.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,905.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;220.00 </td>
+            <td class="column7 style16 n">316.23%</td>
+            <td class="column8 style17 n">&nbsp;€  34.79 </td>
+            <td class="column9 style17 n">&nbsp;€  19.42 </td>
+            <td class="column10 style16 n">0.22%</td>
+            <td class="column11 style17 n">&nbsp;€  8.70 </td>
+            <td class="column12 style17 n">&nbsp;€  0.18 </td>
+          </tr>
+          <tr class="row42">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Engagers_EN</td>
+            <td class="column1 style17 n">&nbsp;€  108.66 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;7,911.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;25.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;4,897.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">303.70%</td>
+            <td class="column8 style17 n">&nbsp;€  36.22 </td>
+            <td class="column9 style17 n">&nbsp;€  13.74 </td>
+            <td class="column10 style16 n">0.32%</td>
+            <td class="column11 style17 n">&nbsp;€  4.35 </td>
+            <td class="column12 style17 n">&nbsp;€  0.12 </td>
+          </tr>
+          <tr class="row43">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Engagers_FR</td>
+            <td class="column1 style17 n">&nbsp;€  68.90 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;3,784.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;12.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;2,400.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">478.96%</td>
+            <td class="column8 style17 n">&nbsp;€  22.97 </td>
+            <td class="column9 style17 n">&nbsp;€  18.21 </td>
+            <td class="column10 style16 n">0.32%</td>
+            <td class="column11 style17 n">&nbsp;€  5.74 </td>
+            <td class="column12 style17 n">&nbsp;€  0.18 </td>
+          </tr>
+          <tr class="row44">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Interest_DE</td>
+            <td class="column1 style17 n">&nbsp;€  36.27 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;936.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;1.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;484.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1213.12%</td>
+            <td class="column8 style17 n">&nbsp;€  9.07 </td>
+            <td class="column9 style17 n">&nbsp;€  38.75 </td>
+            <td class="column10 style16 n">0.11%</td>
+            <td class="column11 style17 n">&nbsp;€  36.27 </td>
+            <td class="column12 style17 n">&nbsp;€  0.39 </td>
+          </tr>
+          <tr class="row45">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Interest_EN</td>
+            <td class="column1 style17 n">&nbsp;€  32.23 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,484.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;9.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;906.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;220.00 </td>
+            <td class="column7 style16 n">682.59%</td>
+            <td class="column8 style17 n">&nbsp;€  16.12 </td>
+            <td class="column9 style17 n">&nbsp;€  21.72 </td>
+            <td class="column10 style16 n">0.61%</td>
+            <td class="column11 style17 n">&nbsp;€  3.58 </td>
+            <td class="column12 style17 n">&nbsp;€  0.19 </td>
+          </tr>
+          <tr class="row46">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Interest_FR</td>
+            <td class="column1 style17 n">&nbsp;€  25.24 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,177.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;812.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1743.26%</td>
+            <td class="column8 style17 n">&nbsp;€  6.31 </td>
+            <td class="column9 style17 n">&nbsp;€  21.44 </td>
+            <td class="column10 style16 n">0.17%</td>
+            <td class="column11 style17 n">&nbsp;€  12.62 </td>
+            <td class="column12 style17 n">&nbsp;€  0.23 </td>
+          </tr>
+          <tr class="row47">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Lookalike_DE</td>
+            <td class="column1 style17 n">&nbsp;€  34.31 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,274.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;7.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;802.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;220.00 </td>
+            <td class="column7 style16 n">641.21%</td>
+            <td class="column8 style17 n">&nbsp;€  17.16 </td>
+            <td class="column9 style17 n">&nbsp;€  26.93 </td>
+            <td class="column10 style16 n">0.55%</td>
+            <td class="column11 style17 n">&nbsp;€  4.90 </td>
+            <td class="column12 style17 n">&nbsp;€  0.24 </td>
+          </tr>
+          <tr class="row48">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Lookalike_EN</td>
+            <td class="column1 style17 n">&nbsp;€  84.16 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;4,899.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;19.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;2,565.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">392.11%</td>
+            <td class="column8 style17 n">&nbsp;€  28.05 </td>
+            <td class="column9 style17 n">&nbsp;€  17.18 </td>
+            <td class="column10 style16 n">0.39%</td>
+            <td class="column11 style17 n">&nbsp;€  4.43 </td>
+            <td class="column12 style17 n">&nbsp;€  0.20 </td>
+          </tr>
+          <tr class="row49">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_Lookalike_FR</td>
+            <td class="column1 style17 n">&nbsp;€  42.70 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,784.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;5.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,341.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">772.83%</td>
+            <td class="column8 style17 n">&nbsp;€  14.23 </td>
+            <td class="column9 style17 n">&nbsp;€  23.93 </td>
+            <td class="column10 style16 n">0.28%</td>
+            <td class="column11 style17 n">&nbsp;€  8.54 </td>
+            <td class="column12 style17 n">&nbsp;€  0.24 </td>
+          </tr>
+          <tr class="row50">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_WebsiteVisitors_DE</td>
+            <td class="column1 style17 n">&nbsp;€  52.00 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,120.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;596.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">846.15%</td>
+            <td class="column8 style17 n">&nbsp;€  13.00 </td>
+            <td class="column9 style17 n">&nbsp;€  24.53 </td>
+            <td class="column10 style16 n">0.14%</td>
+            <td class="column11 style17 n">&nbsp;€  17.33 </td>
+            <td class="column12 style17 n">&nbsp;€  0.36 </td>
+          </tr>
+          <tr class="row51">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_WebsiteVisitors_EN</td>
+            <td class="column1 style17 n">&nbsp;€  70.59 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,704.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;8.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;822.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">467.49%</td>
+            <td class="column8 style17 n">&nbsp;€  23.53 </td>
+            <td class="column9 style17 n">&nbsp;€  26.11 </td>
+            <td class="column10 style16 n">0.30%</td>
+            <td class="column11 style17 n">&nbsp;€  8.82 </td>
+            <td class="column12 style17 n">&nbsp;€  0.32 </td>
+          </tr>
+          <tr class="row52">
+            <td class="column0 style14 s">Web_Dark_MultiProduct_202106_WebsiteVisitors_FR</td>
+            <td class="column1 style17 n">&nbsp;€  41.22 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,841.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;503.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1067.44%</td>
+            <td class="column8 style17 n">&nbsp;€  10.31 </td>
+            <td class="column9 style17 n">&nbsp;€  22.39 </td>
+            <td class="column10 style16 n">0.11%</td>
+            <td class="column11 style17 n">&nbsp;€  20.61 </td>
+            <td class="column12 style17 n">&nbsp;€  0.37 </td>
+          </tr>
+          <tr class="row53">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_CRM_DE</td>
+            <td class="column1 style17 n">&nbsp;€  79.42 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,407.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;24.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;948.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">415.51%</td>
+            <td class="column8 style17 n">&nbsp;€  26.47 </td>
+            <td class="column9 style17 n">&nbsp;€  33.00 </td>
+            <td class="column10 style16 n">1.00%</td>
+            <td class="column11 style17 n">&nbsp;€  3.31 </td>
+            <td class="column12 style17 n">&nbsp;€  0.23 </td>
+          </tr>
+          <tr class="row54">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_CRM_EN</td>
+            <td class="column1 style17 n">&nbsp;€  8.60 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;428.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;235.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">3837.21%</td>
+            <td class="column8 style17 n">&nbsp;€  2.87 </td>
+            <td class="column9 style17 n">&nbsp;€  20.09 </td>
+            <td class="column10 style16 n">0.47%</td>
+            <td class="column11 style17 n">&nbsp;€  4.30 </td>
+            <td class="column12 style17 n">&nbsp;€  0.18 </td>
+          </tr>
+          <tr class="row55">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_CRM_FR</td>
+            <td class="column1 style17 n">&nbsp;€  23.84 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;796.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;10.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;355.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1845.64%</td>
+            <td class="column8 style17 n">&nbsp;€  5.96 </td>
+            <td class="column9 style17 n">&nbsp;€  29.95 </td>
+            <td class="column10 style16 n">1.26%</td>
+            <td class="column11 style17 n">&nbsp;€  2.38 </td>
+            <td class="column12 style17 n">&nbsp;€  0.21 </td>
+          </tr>
+          <tr class="row56">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Engagers_DE</td>
+            <td class="column1 style17 n">&nbsp;€  224.05 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;10,135.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;58.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;5,824.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">196.38%</td>
+            <td class="column8 style17 n">&nbsp;€  56.01 </td>
+            <td class="column9 style17 n">&nbsp;€  22.11 </td>
+            <td class="column10 style16 n">0.57%</td>
+            <td class="column11 style17 n">&nbsp;€  3.86 </td>
+            <td class="column12 style17 n">&nbsp;€  0.15 </td>
+          </tr>
+          <tr class="row57">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Engagers_EN</td>
+            <td class="column1 style17 n">&nbsp;€  47.02 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;4,029.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;2,161.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">701.83%</td>
+            <td class="column8 style17 n">&nbsp;€  15.67 </td>
+            <td class="column9 style17 n">&nbsp;€  11.67 </td>
+            <td class="column10 style16 n">0.10%</td>
+            <td class="column11 style17 n">&nbsp;€  11.76 </td>
+            <td class="column12 style17 n">&nbsp;€  0.13 </td>
+          </tr>
+          <tr class="row58">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Engagers_FR</td>
+            <td class="column1 style17 n">&nbsp;€  139.10 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;8,988.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;28.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;3,817.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">316.32%</td>
+            <td class="column8 style17 n">&nbsp;€  34.78 </td>
+            <td class="column9 style17 n">&nbsp;€  15.48 </td>
+            <td class="column10 style16 n">0.31%</td>
+            <td class="column11 style17 n">&nbsp;€  4.97 </td>
+            <td class="column12 style17 n">&nbsp;€  0.14 </td>
+          </tr>
+          <tr class="row59">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Interest_DE</td>
+            <td class="column1 style17 n">&nbsp;€  209.11 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;6,030.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;34.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;3,152.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">210.42%</td>
+            <td class="column8 style17 n">&nbsp;€  52.28 </td>
+            <td class="column9 style17 n">&nbsp;€  34.68 </td>
+            <td class="column10 style16 n">0.56%</td>
+            <td class="column11 style17 n">&nbsp;€  6.15 </td>
+            <td class="column12 style17 n">&nbsp;€  0.29 </td>
+          </tr>
+          <tr class="row60">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Interest_EN</td>
+            <td class="column1 style17 n">&nbsp;€  20.15 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,445.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;925.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">1637.72%</td>
+            <td class="column8 style17 n">&nbsp;€  6.72 </td>
+            <td class="column9 style17 n">&nbsp;€  13.94 </td>
+            <td class="column10 style16 n">0.14%</td>
+            <td class="column11 style17 n">&nbsp;€  10.08 </td>
+            <td class="column12 style17 n">&nbsp;€  0.16 </td>
+          </tr>
+          <tr class="row61">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Interest_FR</td>
+            <td class="column1 style17 n">&nbsp;€  47.74 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,798.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;14.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,252.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">691.24%</td>
+            <td class="column8 style17 n">&nbsp;€  15.91 </td>
+            <td class="column9 style17 n">&nbsp;€  26.55 </td>
+            <td class="column10 style16 n">0.78%</td>
+            <td class="column11 style17 n">&nbsp;€  3.41 </td>
+            <td class="column12 style17 n">&nbsp;€  0.22 </td>
+          </tr>
+          <tr class="row62">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Lookalike_DE</td>
+            <td class="column1 style17 n">&nbsp;€  292.19 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;9,508.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;50.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;4,734.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">112.94%</td>
+            <td class="column8 style17 n">&nbsp;€  97.40 </td>
+            <td class="column9 style17 n">&nbsp;€  30.73 </td>
+            <td class="column10 style16 n">0.53%</td>
+            <td class="column11 style17 n">&nbsp;€  5.84 </td>
+            <td class="column12 style17 n">&nbsp;€  0.22 </td>
+          </tr>
+          <tr class="row63">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Lookalike_EN</td>
+            <td class="column1 style17 n">&nbsp;€  73.96 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;5,007.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;20.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;3,043.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">446.19%</td>
+            <td class="column8 style17 n">&nbsp;€  24.65 </td>
+            <td class="column9 style17 n">&nbsp;€  14.77 </td>
+            <td class="column10 style16 n">0.40%</td>
+            <td class="column11 style17 n">&nbsp;€  3.70 </td>
+            <td class="column12 style17 n">&nbsp;€  0.15 </td>
+          </tr>
+          <tr class="row64">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_Lookalike_FR</td>
+            <td class="column1 style17 n">&nbsp;€  66.75 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,228.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;15.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,284.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">659.18%</td>
+            <td class="column8 style17 n">&nbsp;€  16.69 </td>
+            <td class="column9 style17 n">&nbsp;€  29.96 </td>
+            <td class="column10 style16 n">0.67%</td>
+            <td class="column11 style17 n">&nbsp;€  4.45 </td>
+            <td class="column12 style17 n">&nbsp;€  0.23 </td>
+          </tr>
+          <tr class="row65">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_WebsiteVisitors_DE</td>
+            <td class="column1 style17 n">&nbsp;€  96.72 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,169.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;11.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;647.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">454.92%</td>
+            <td class="column8 style17 n">&nbsp;€  24.18 </td>
+            <td class="column9 style17 n">&nbsp;€  44.59 </td>
+            <td class="column10 style16 n">0.51%</td>
+            <td class="column11 style17 n">&nbsp;€  8.79 </td>
+            <td class="column12 style17 n">&nbsp;€  0.39 </td>
+          </tr>
+          <tr class="row66">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_WebsiteVisitors_EN</td>
+            <td class="column1 style17 n">&nbsp;€  4.85 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;182.00 </td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 n">&nbsp;&nbsp;81.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;5.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;550.00 </td>
+            <td class="column7 style16 n">11340.21%</td>
+            <td class="column8 style17 n">&nbsp;€  0.97 </td>
+            <td class="column9 style17 n">&nbsp;€  26.65 </td>
+            <td class="column10 style16 n">0.00%</td>
+            <td class="column11 style17 e">#DIV/0!</td>
+            <td class="column12 style17 n">&nbsp;€  0.24 </td>
+          </tr>
+          <tr class="row67">
+            <td class="column0 style14 s">Web_Dark_SingleProductBenefits_Revitalizing Supreme Bright_WebsiteVisitors_FR</td>
+            <td class="column1 style17 n">&nbsp;€  33.64 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;816.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;8.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;366.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;220.00 </td>
+            <td class="column7 style16 n">653.98%</td>
+            <td class="column8 style17 n">&nbsp;€  16.82 </td>
+            <td class="column9 style17 n">&nbsp;€  41.23 </td>
+            <td class="column10 style16 n">0.98%</td>
+            <td class="column11 style17 n">&nbsp;€  4.21 </td>
+            <td class="column12 style17 n">&nbsp;€  0.25 </td>
+          </tr>
+          <tr class="row68">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_CRM_DE</td>
+            <td class="column1 style17 n">&nbsp;€  20.75 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;406.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;223.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">1590.36%</td>
+            <td class="column8 style17 n">&nbsp;€  6.92 </td>
+            <td class="column9 style17 n">&nbsp;€  51.11 </td>
+            <td class="column10 style16 n">0.99%</td>
+            <td class="column11 style17 n">&nbsp;€  5.19 </td>
+            <td class="column12 style17 n">&nbsp;€  0.32 </td>
+          </tr>
+          <tr class="row69">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_CRM_EN</td>
+            <td class="column1 style17 n">&nbsp;€  5.53 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;301.00 </td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 n">&nbsp;&nbsp;131.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;5.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;550.00 </td>
+            <td class="column7 style16 n">9945.75%</td>
+            <td class="column8 style17 n">&nbsp;€  1.11 </td>
+            <td class="column9 style17 n">&nbsp;€  18.37 </td>
+            <td class="column10 style16 n">0.00%</td>
+            <td class="column11 style17 e">#DIV/0!</td>
+            <td class="column12 style17 n">&nbsp;€  0.18 </td>
+          </tr>
+          <tr class="row70">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_CRM_FR</td>
+            <td class="column1 style17 n">&nbsp;€  32.41 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;999.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;391.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1357.61%</td>
+            <td class="column8 style17 n">&nbsp;€  8.10 </td>
+            <td class="column9 style17 n">&nbsp;€  32.44 </td>
+            <td class="column10 style16 n">0.30%</td>
+            <td class="column11 style17 n">&nbsp;€  10.80 </td>
+            <td class="column12 style17 n">&nbsp;€  0.25 </td>
+          </tr>
+          <tr class="row71">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Engagers_DE</td>
+            <td class="column1 style17 n">&nbsp;€  471.83 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;18,705.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;90.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;8,964.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;220.00 </td>
+            <td class="column7 style16 n">46.63%</td>
+            <td class="column8 style17 n">&nbsp;€  235.92 </td>
+            <td class="column9 style17 n">&nbsp;€  25.22 </td>
+            <td class="column10 style16 n">0.48%</td>
+            <td class="column11 style17 n">&nbsp;€  5.24 </td>
+            <td class="column12 style17 n">&nbsp;€  0.20 </td>
+          </tr>
+          <tr class="row72">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Engagers_EN</td>
+            <td class="column1 style17 n">&nbsp;€  16.87 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,464.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;989.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;220.00 </td>
+            <td class="column7 style16 n">1304.09%</td>
+            <td class="column8 style17 n">&nbsp;€  8.44 </td>
+            <td class="column9 style17 n">&nbsp;€  11.52 </td>
+            <td class="column10 style16 n">0.27%</td>
+            <td class="column11 style17 n">&nbsp;€  4.22 </td>
+            <td class="column12 style17 n">&nbsp;€  0.09 </td>
+          </tr>
+          <tr class="row73">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Engagers_FR</td>
+            <td class="column1 style17 n">&nbsp;€  21.66 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,228.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;8.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;761.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">2031.39%</td>
+            <td class="column8 style17 n">&nbsp;€  5.42 </td>
+            <td class="column9 style17 n">&nbsp;€  17.64 </td>
+            <td class="column10 style16 n">0.65%</td>
+            <td class="column11 style17 n">&nbsp;€  2.71 </td>
+            <td class="column12 style17 n">&nbsp;€  0.13 </td>
+          </tr>
+          <tr class="row74">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Interest_DE</td>
+            <td class="column1 style17 n">&nbsp;€  128.38 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;3,944.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;15.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;2,126.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">257.05%</td>
+            <td class="column8 style17 n">&nbsp;€  42.79 </td>
+            <td class="column9 style17 n">&nbsp;€  32.55 </td>
+            <td class="column10 style16 n">0.38%</td>
+            <td class="column11 style17 n">&nbsp;€  8.56 </td>
+            <td class="column12 style17 n">&nbsp;€  0.37 </td>
+          </tr>
+          <tr class="row75">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Interest_EN</td>
+            <td class="column1 style17 n">&nbsp;€  7.90 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;588.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;2.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;429.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">5569.62%</td>
+            <td class="column8 style17 n">&nbsp;€  1.98 </td>
+            <td class="column9 style17 n">&nbsp;€  13.44 </td>
+            <td class="column10 style16 n">0.34%</td>
+            <td class="column11 style17 n">&nbsp;€  3.95 </td>
+            <td class="column12 style17 n">&nbsp;€  0.14 </td>
+          </tr>
+          <tr class="row76">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Interest_FR</td>
+            <td class="column1 style17 n">&nbsp;€  51.44 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,117.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;7.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,080.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">855.37%</td>
+            <td class="column8 style17 n">&nbsp;€  12.86 </td>
+            <td class="column9 style17 n">&nbsp;€  24.30 </td>
+            <td class="column10 style16 n">0.33%</td>
+            <td class="column11 style17 n">&nbsp;€  7.35 </td>
+            <td class="column12 style17 n">&nbsp;€  0.27 </td>
+          </tr>
+          <tr class="row77">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Lookalike_DE</td>
+            <td class="column1 style17 n">&nbsp;€  97.10 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,423.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;17.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,771.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">339.86%</td>
+            <td class="column8 style17 n">&nbsp;€  32.37 </td>
+            <td class="column9 style17 n">&nbsp;€  40.07 </td>
+            <td class="column10 style16 n">0.70%</td>
+            <td class="column11 style17 n">&nbsp;€  5.71 </td>
+            <td class="column12 style17 n">&nbsp;€  0.27 </td>
+          </tr>
+          <tr class="row78">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Lookalike_EN</td>
+            <td class="column1 style17 n">&nbsp;€  34.31 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,568.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;5.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;1,679.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">1282.42%</td>
+            <td class="column8 style17 n">&nbsp;€  8.58 </td>
+            <td class="column9 style17 n">&nbsp;€  13.36 </td>
+            <td class="column10 style16 n">0.19%</td>
+            <td class="column11 style17 n">&nbsp;€  6.86 </td>
+            <td class="column12 style17 n">&nbsp;€  0.11 </td>
+          </tr>
+          <tr class="row79">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_Lookalike_FR</td>
+            <td class="column1 style17 n">&nbsp;€  98.20 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;5,092.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;20.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;2,468.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">336.05%</td>
+            <td class="column8 style17 n">&nbsp;€  32.73 </td>
+            <td class="column9 style17 n">&nbsp;€  19.29 </td>
+            <td class="column10 style16 n">0.39%</td>
+            <td class="column11 style17 n">&nbsp;€  4.91 </td>
+            <td class="column12 style17 n">&nbsp;€  0.19 </td>
+          </tr>
+          <tr class="row80">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_WebsiteVisitors_DE</td>
+            <td class="column1 style17 n">&nbsp;€  91.72 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;2,578.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;18.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;915.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;4.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;440.00 </td>
+            <td class="column7 style16 n">479.72%</td>
+            <td class="column8 style17 n">&nbsp;€  22.93 </td>
+            <td class="column9 style17 n">&nbsp;€  35.58 </td>
+            <td class="column10 style16 n">0.70%</td>
+            <td class="column11 style17 n">&nbsp;€  5.10 </td>
+            <td class="column12 style17 n">&nbsp;€  0.33 </td>
+          </tr>
+          <tr class="row81">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_WebsiteVisitors_EN</td>
+            <td class="column1 style17 n">&nbsp;€  5.75 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;338.00 </td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 n">&nbsp;&nbsp;126.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;5.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;550.00 </td>
+            <td class="column7 style16 n">9565.22%</td>
+            <td class="column8 style17 n">&nbsp;€  1.15 </td>
+            <td class="column9 style17 n">&nbsp;€  17.01 </td>
+            <td class="column10 style16 n">0.00%</td>
+            <td class="column11 style17 e">#DIV/0!</td>
+            <td class="column12 style17 n">&nbsp;€  0.21 </td>
+          </tr>
+          <tr class="row82">
+            <td class="column0 style14 s">Web_Dark_SingleProductIngredients_Revitalizing Supreme Bright_WebsiteVisitors_FR</td>
+            <td class="column1 style17 n">&nbsp;€  39.59 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;1,177.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;6.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;385.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;3.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;330.00 </td>
+            <td class="column7 style16 n">833.54%</td>
+            <td class="column8 style17 n">&nbsp;€  13.20 </td>
+            <td class="column9 style17 n">&nbsp;€  33.64 </td>
+            <td class="column10 style16 n">0.51%</td>
+            <td class="column11 style17 n">&nbsp;€  6.60 </td>
+            <td class="column12 style17 n">&nbsp;€  0.37 </td>
+          </tr>
+          <tr class="row83">
+            <td class="column0 style14 s">Grand Total</td>
+            <td class="column1 style17 n">&nbsp;€  15,000.00 </td>
+            <td class="column2 style15 n">&nbsp;&nbsp;875,002.00 </td>
+            <td class="column3 style15 n">&nbsp;&nbsp;4,054.00 </td>
+            <td class="column4 style15 n">&nbsp;&nbsp;512,016.00 </td>
+            <td class="column5 style15 n">&nbsp;&nbsp;253.00 </td>
+            <td class="column6 style15 n">&nbsp;&nbsp;27,830.00 </td>
+            <td class="column7 style16 n">185.53%</td>
+            <td class="column8 style17 n">&nbsp;€  59.29 </td>
+            <td class="column9 style17 n">&nbsp;€  17.14 </td>
+            <td class="column10 style16 n">0.46%</td>
+            <td class="column11 style17 n">&nbsp;€  3.70 </td>
+            <td class="column12 style17 n">&nbsp;€  0.38 </td>
+          </tr>
+          <tr class="row84">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row85">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row86">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row87">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row88">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row89">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row90">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row91">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row92">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row93">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row94">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row95">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row96">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row97">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row98">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row99">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row100">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row101">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row102">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row103">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row104">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row105">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row106">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row107">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row108">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row109">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row110">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row111">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row112">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row113">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row114">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row115">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row116">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row117">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row118">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row119">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row120">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row121">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row122">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row123">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row124">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row125">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row126">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row127">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row128">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row129">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row130">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+          <tr class="row131">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
